@@ -3,7 +3,6 @@ rm(list=ls())
 # loading required libraries
 library(ggplot2)
 library(rcompanion)
-library(extrafont)
 
 # path
 path_folder <- "D:/non_native_tree/"
@@ -59,8 +58,8 @@ ggplot(pd_global, aes(x = pdmean_sta,y = probability)) +
   scale_x_continuous(breaks = seq(-4, 6, 2)) +
   theme(panel.background = element_blank(),
         axis.line = element_line(),
-        axis.text = element_text(family = "Times New Roman", size = 10),
-        axis.title = element_text(family = "Times New Roman", size = 12)) +
+        axis.text = element_text(size = 10),
+        axis.title = element_text(size = 12)) +
   xlab("MDNS") +
   ylab("Probability of being introduced")
 
@@ -91,8 +90,8 @@ ggplot(pd_global, aes(x = pdmin_sta,y = probability)) +
                      labels = c(0, sprintf("%.3f", c(0.005, 0.010, 0.015, 0.020, 0.025)))) +
   theme(panel.background = element_blank(),
         axis.line = element_line(),
-        axis.text = element_text(family = "Times New Roman", size = 10),
-        axis.title = element_text(family = "Times New Roman", size = 12)) +
+        axis.text = element_text(size = 10),
+        axis.title = element_text(size = 12)) +
   xlab("DNNS") +
   ylab("Probability of being introduced")
 
@@ -153,8 +152,8 @@ ggplot(threatenedpd_global, aes(x = pdmean_sta,y = probability)) +
   scale_x_continuous(breaks = c(-2, 0, 2, 4, 6)) +
   theme(panel.background = element_blank(),
         axis.line = element_line(),
-        axis.text = element_text(family = "Times New Roman", size = 10),
-        axis.title = element_text(family = "Times New Roman", size = 12)) +
+        axis.text = element_text(size = 10),
+        axis.title = element_text(size = 12)) +
   xlab("MDNS") +
   ylab("Probability of being introduced")
 
@@ -186,8 +185,8 @@ ggplot(threatenedpd_global, aes(x = pdmin_sta,y = probability)) +
                      labels = c(0, sprintf("%.3f", c(0.005, 0.01, 0.015)))) +
   theme(panel.background = element_blank(),
         axis.line = element_line(),
-        axis.text = element_text(family = "Times New Roman", size = 10),
-        axis.title = element_text(family = "Times New Roman", size = 12)) +
+        axis.text = element_text(size = 10),
+        axis.title = element_text(size = 12)) +
   xlab("DNNS") +
   ylab("Probability of being introduced")
 
@@ -248,8 +247,8 @@ ggplot(nonthreatenedpd_global, aes(x = pdmean_sta,y = probability)) +
   scale_x_continuous(breaks = seq(-4, 6, 2)) +
   theme(panel.background = element_blank(),
         axis.line = element_line(),
-        axis.text = element_text(family = "Times New Roman", size = 10),
-        axis.title = element_text(family = "Times New Roman", size = 12)) +
+        axis.text = element_text(size = 10),
+        axis.title = element_text(size = 12)) +
   xlab("MDNS") +
   ylab("Probability of being introduced")
 
@@ -281,8 +280,8 @@ ggplot(nonthreatenedpd_global, aes(x = pdmin_sta,y = probability)) +
                      labels = c(0, sprintf("%.3f", c(0.01, 0.02, 0.03)))) +
   theme(panel.background = element_blank(),
         axis.line = element_line(),
-        axis.text = element_text(family = "Times New Roman", size = 10),
-        axis.title = element_text(family = "Times New Roman", size = 12)) +
+        axis.text = element_text(size = 10),
+        axis.title = element_text(size = 12)) +
   xlab("DNNS") +
   ylab("Probability of being introduced")
 
