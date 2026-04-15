@@ -5,7 +5,6 @@ library(raster)
 library(ggplot2)
 library(MetBrewer)
 library(scales)
-library(extrafont)
 
 # path
 path_folder <- "D:/non_native_tree/"
@@ -487,8 +486,8 @@ ggplot(richness_tdwg_plot, aes(x = native_ri, y = nonnative_ri)) +
                                 "8" = "#5D74A5")) +
   theme(panel.background = element_blank(),
         axis.line = element_line(),
-        axis.text = element_text(family = "Times New Roman", size = 9),
-        axis.title = element_text(family = "Times New Roman", size = 12)) +
+        axis.text = element_text(size = 8),
+        axis.title = element_text(size = 11)) +
   xlab("Overall native richness") +
   ylab("Overall non-native richness") +
   theme(legend.position = "none")
@@ -515,8 +514,8 @@ ggplot(richness_tdwg_plot, aes(x = threatenednative_ri, y = threatenednonnative_
                      labels = c(0, 100, 200, 300, 400)) +
   theme(panel.background = element_blank(),
         axis.line = element_line(),
-        axis.text = element_text(family = "Times New Roman", size = 9),
-        axis.title = element_text(family = "Times New Roman", size = 12)) +
+        axis.text = element_text(size = 8),
+        axis.title = element_text(size = 11)) +
   xlab("Threatened native richness") +
   ylab("Threatened non-native richness") +
   theme(legend.position = "none")
@@ -541,8 +540,8 @@ ggplot(richness_tdwg_plot, aes(x = nonthreatenednative_ri, y = nonthreatenednonn
                                 "8" = "#5D74A5")) +
   theme(panel.background = element_blank(),
         axis.line = element_line(),
-        axis.text = element_text(family = "Times New Roman", size = 9),
-        axis.title = element_text(family = "Times New Roman", size = 12)) +
+        axis.text = element_text(size = 8),
+        axis.title = element_text(size = 11)) +
   xlab("Non-threatened native richness") +
   ylab("Non-threatened non-native richness") +
   theme(legend.position = "none")
