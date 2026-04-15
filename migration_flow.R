@@ -2,7 +2,6 @@ rm(list=ls())
 
 # loading required libraries
 library(circlize)
-library(extrafont)
 
 # path
 path_folder <- "D:/non_native_tree/"
@@ -253,7 +252,7 @@ circos.track(bg.border = NA, ylim = c(0,1),
                xcenter = get.cell.meta.data("xcenter")
                sector.index = get.cell.meta.data("sector.index")
                circos.text(x = xcenter, y = 2.1, labels = sector.index, 
-                           facing = "bending", cex = 0.7,font = 1, family = "Times New Roman")
+                           facing = "bending", cex = 0.62, font = 1)
                circos.axis(h = "top", labels = FALSE, track.index = 2,
                            minor.ticks = 0,major.at = seq(0, 33000, 1000),
                            lwd = 1,major.tick.length = mm_y(0.5))
@@ -365,7 +364,7 @@ circos.track(bg.border = NA, ylim = c(0,1),
                xcenter = get.cell.meta.data("xcenter")
                sector.index = get.cell.meta.data("sector.index")
                circos.text(x = xcenter, y = 2.1, labels = sector.index, 
-                           facing = "bending", cex = 0.7,font = 1, family = "Times New Roman")
+                           facing = "bending", cex = 0.62, font = 1)
                circos.axis(h = "top", labels = FALSE, track.index = 2,
                            minor.ticks = 0,major.at = seq(0, 5000, 100),
                            lwd = 1,major.tick.length = mm_y(0.5))
@@ -477,7 +476,7 @@ circos.track(bg.border = NA, ylim = c(0,1),
                xcenter = get.cell.meta.data("xcenter")
                sector.index = get.cell.meta.data("sector.index")
                circos.text(x = xcenter, y = 2.1, labels = sector.index, 
-                           facing = "bending", cex = 0.7,font = 1, family = "Times New Roman")
+                           facing = "bending", cex = 0.62, font = 1)
                circos.axis(h = "top", labels = FALSE, track.index = 2,
                            minor.ticks = 0,major.at = seq(0, 33000, 1000),
                            lwd = 1,major.tick.length = mm_y(0.5))
