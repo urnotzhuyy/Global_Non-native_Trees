@@ -12,9 +12,7 @@ library(tidyverse)
 library(emmeans)
 library(PNWColors)
 library(MetBrewer)
-library(extrafont)
 library(scales)
-library(extrafont)
 
 # path
 path_folder <- "D:/non_native_tree/"
@@ -240,12 +238,12 @@ ggplot() +
        y = "Probability of being introduced") +
   theme(panel.background = element_blank(),
         axis.line = element_line(),
-        axis.text = element_text(family = "Times New Roman", size = 10),
-        axis.title = element_text(family = "Times New Roman", size = 12)) +
+        axis.text = element_text(size = 10),
+        axis.title = element_text(size = 12)) +
   scale_y_continuous(labels = c(0, sprintf("%.2f", c(0.25, 0.5, 0.75, 1))),
                      breaks = c(0, 0.25, 0.50, 0.75, 1.00),
                      limits = c(0, 1)) +
-  scale_x_continuous(labels = c(-5, -2.5, 0, 2.5),
+  scale_x_continuous(labels = c(sprintf("%.1f", c(-5, -2.5)), 0, sprintf("%.1f", 2.5)),
                      breaks = c(-5, -2.5, 0, 2.5))
 
 dev.off()
@@ -475,11 +473,14 @@ ggplot() +
        y = "Probability of being introduced") +
   theme(panel.background = element_blank(),
         axis.line = element_line(),
-        axis.text = element_text(family = "Times New Roman", size = 10),
-        axis.title = element_text(family = "Times New Roman", size = 12)) +
+        axis.text = element_text(size = 10),
+        axis.title = element_text(size = 12)) +
   scale_y_continuous(labels = c(0, sprintf("%.2f", c(0.25, 0.5, 0.75, 1))),
                      breaks = c(0, 0.25, 0.50, 0.75, 1.00),
-                     limits = c(0, 1))
+                     limits = c(0, 1)) +
+  scale_x_continuous(labels = c(sprintf("%.1f", c(-5, -2.5)), 0, sprintf("%.1f", c(2.5, 5))),
+                     breaks = c(-5, -2.5, 0, 2.5, 5))
+
 dev.off()
 
 #######################
@@ -707,11 +708,14 @@ ggplot() +
        y = "Probability of being introduced") +
   theme(panel.background = element_blank(),
         axis.line = element_line(),
-        axis.text = element_text(family = "Times New Roman", size = 10),
-        axis.title = element_text(family = "Times New Roman", size = 12)) +
+        axis.text = element_text(size = 10),
+        axis.title = element_text(size = 12)) +
   scale_y_continuous(labels = c(0, sprintf("%.2f", c(0.25, 0.5, 0.75, 1))),
                      breaks = c(0, 0.25, 0.50, 0.75, 1.00),
-                     limits = c(0, 1))
+                     limits = c(0, 1)) +
+  scale_x_continuous(labels = c(sprintf("%.1f", c(-5, -2.5)), 0, sprintf("%.1f", c(2.5, 5))),
+                     breaks = c(-5, -2.5, 0, 2.5, 5))
+
 dev.off()
 
 ##########################
@@ -738,8 +742,8 @@ ggplot(grand_mean_ecouses) +
        y = "Probability of being introduced") +
   theme(panel.background = element_blank(),
         axis.line = element_line(),
-        axis.text = element_text(size = 10, family = "Times New Roman"),
-        axis.title = element_text(size = 12, family = "Times New Roman")) +
+        axis.text = element_text(size = 10),
+        axis.title = element_text(size = 12)) +
   scale_y_continuous(labels = c(0,sprintf("%.2f",c(0.25,0.5,0.75,1))),
                      breaks = c(0,0.25,0.50,0.75,1.00),
                      limits = c(0,1)) +
@@ -769,8 +773,8 @@ ggplot(grand_mean_ecouses_threatened) +
        y = "Probability of being introduced") +
   theme(panel.background = element_blank(),
         axis.line = element_line(),
-        axis.text = element_text(size = 10, family = "Times New Roman"),
-        axis.title = element_text(size = 12, family = "Times New Roman")) +
+        axis.text = element_text(size = 10),
+        axis.title = element_text(size = 12)) +
   scale_y_continuous(labels = c(0,sprintf("%.2f",c(0.25,0.5,0.75,1))),
                      breaks = c(0,0.25,0.50,0.75,1.00),
                      limits = c(0,1)) +
@@ -800,8 +804,8 @@ ggplot(grand_mean_ecouses_nonthreatened) +
        y = "Probability of being introduced") +
   theme(panel.background = element_blank(),
         axis.line = element_line(),
-        axis.text = element_text(size = 10, family = "Times New Roman"),
-        axis.title = element_text(size = 12, family = "Times New Roman")) +
+        axis.text = element_text(size = 10),
+        axis.title = element_text(size = 12)) +
   scale_y_continuous(labels = c(0,sprintf("%.2f",c(0.25,0.5,0.75,1))),
                      breaks = c(0,0.25,0.50,0.75,1.00),
                      limits = c(0,1)) +
